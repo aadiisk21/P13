@@ -6,7 +6,8 @@
     --clr-grayish-blue: hsl(208, 11%, 55%);
 
     /* font-weight */
-    --fnt-weight-normal: 400;
+    --fnt-weight-normal: 200;
+    --fnt-weight-normal-bold: 400;
     --fnt-weight-bold: 600;
     --fnt-weight-bolder: 700;
 
@@ -27,15 +28,24 @@ body {
     overflow-x: hidden;
 }
 
-/* header */
-.header {
+/* Container */
+
+.container {
     width: 100vw;
     height: 100vh;
+}
+
+/* || header */
+.header {
+    width: 100vw;
+    height: 90vh;
+    ;
     background-color: var(--clr-pale-cyan);
     background-image: url(../images/bg-hero-desktop.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    object-fit: contain;
 }
 
 .header__container {
@@ -43,11 +53,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
     padding: 3.5rem 0;
+    margin: 0 auto;
 }
 
-.header__container img {
+.header__container>img {
     width: 10rem;
 }
 
@@ -72,4 +82,40 @@ body {
     color: lightslategray;
     transition: all 0.3s;
     box-shadow: 0px 2px 10px -1px rgba(211, 211, 211, 0.80);
+}
+
+.header__body {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-family: var(--fnt-poppins);
+}
+
+.header__body-content>h1 {
+    font-size: 2.5rem;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.header__body-content>p {
+    font-size: 1.2rem;
+    color: var(--clr-dark-cyan);
+    font-family: var(--fnt-open-sans);
+    font-weight: 100;
+    width: 90%;
+    /* padding-right: 2rem; */
+    /* line-height: 1.5rem; */
+}
+
+.header__body-btn {
+    margin-top: 1.4rem;
+    background-color: var(--clr-pink);
+    color: rgba(255, 255, 255, 0.90);
+    font-weight: var(--fnt-weight-bold);
+    padding: 1.1rem 4rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
 }
