@@ -251,9 +251,9 @@ body {
 .footer {
     width: 100vw;
     height: 67vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     background-color: var(--clr-dark-cyan);
     color: rgba(255, 255, 255, 0.8);
     font-family: var(--fnt-open-sans);
@@ -362,7 +362,170 @@ img.footer__col-one-img {
 .fb__icon:hover,
 .tt__icon:hover,
 .insta__icon:hover {
-    border: 1px solid  hsl(322, 100%, 70%);
+    border: 1px solid hsl(322, 100%, 70%);
     color: hsl(322, 100%, 70%);
     transition: all 0.3s;
+}
+
+.copy__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: var(--clr-dark-cyan);
+    text-align: center;
+}
+
+/* media query for other screen */
+@media screen and (max-width:600px) {
+    body {
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    .header {
+        width: 100vw;
+        height: 94vh;
+        background-image: url(../images/bg-hero-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+    }
+
+    .header__container {
+        padding: 3rem 0;
+    }
+
+    .header__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .header__body-content>h1 {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.5rem;
+    }
+
+    .header__body-content>p {
+        width: 100%;
+        margin: 0.8rem auto;
+        padding: 0.2rem;
+    }
+
+    .header__body-btn {
+        padding: 0.8rem 4rem;
+        margin: 1.3rem 0 2.5rem 0;
+    }
+
+    .header__body-img {
+        width: 98%;
+    }
+
+    .card__wrapper-content {
+        height: 28rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .card__wrapper-data {
+        margin: 0;
+    }
+
+    .card__wrapper-data>h1 {
+        font-size: 1.4rem;
+        margin-top: 3rem;
+    }
+
+    .card__wrapper-data>p {
+        width: 100%;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    .card__wrapper-img>img {
+        margin-top: 1rem;
+        width: 95%;
+        height: 100%;
+    }
+
+    .card__wrapper-content:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    .card__wrapper-content:nth-child(2) .card__wrapper-data {
+        position: unset;
+    }
+
+    .card__wrapper-content:nth-child(2) p {
+        width: 97%;
+    }
+
+    .card__wrapper-content:nth-child(2) img {
+        margin-left: 0;
+    }
+
+    .card__wrapper-content:nth-child(3) p {
+        padding: 0 0.8rem;
+    }
+
+    .overlap {
+        width: 95%;
+        height: auto;
+        position: relative;
+        top: 4rem;
+    }
+
+    .overlap>h1 {
+        padding-top: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .overlap>button {
+        width: 60%;
+        font-size: .7rem;
+        height: 2.8rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .footer {
+        height: fit-content;
+    }
+
+    .footer__col {
+        flex-wrap: wrap;
+        flex-flow: column;
+    }
+
+    .footer__col-one {
+        width: 100%;
+    }
+
+    .footer__col-one p {
+        padding-right: 2.2rem;
+    }
+
+    .footer__col-two,
+    .footer__col-three,
+    .footer__col-four {
+        position: unset;
+    }
+
+    .footer__col-four {
+        margin-top: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
 }
